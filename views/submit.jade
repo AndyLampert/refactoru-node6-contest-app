@@ -1,0 +1,20 @@
+extends layout
+
+//- iframe(width='560', height='315', src='#{masterList.name}')
+//- p #{masterList.name}
+block content
+	h1.thank-you-message Here are the current submissions!
+	//- insert thank you for submitting
+
+	//- append a warning when >8 videos have been submitted
+
+	if(videoNumCheck)
+	h3 No more videos can be submitted!
+	for entry in masterList
+		iframe(width='560', height='315', src='#{entry.url}', frameborder='0', allowfullscreen='')
+
+			//- jade for loop
+			//- for(var i=0;i<y.length;i++){
+			//- 	var x = y[i]
+			//- }
+

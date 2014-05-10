@@ -1,4 +1,20 @@
 extends layout
 
 block content
-	h1 Hello Boulder!
+	h1 Contest app
+
+	form(id="contest-entry", method="post", action="/submit", role="form")
+		.form-group
+			h3.video-form Name of the Video
+			input.form-control(type="text",  name="name", placeholder="Name")
+		.form-group
+			h3.video-form Video URL
+			p.small (be sure to include the embedded link, not the link from the url)
+			input.form-control(type="text",  name="url", placeholder="URL")
+		.form-group
+			h3.video-form Video Title
+			input.form-control(type="text", name="videoTitle",  placeholder="Title")
+		.form-group
+			h3.video-form Video Description
+			input.form-control(type="text", name="videoDesc",  placeholder="Description")
+		button.btn.btn-default.btn-lg(type="submit") Submit
